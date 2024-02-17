@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+        <title> Dashbord</title>
+
+        <!--font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,500&display=swap" rel="stylesheet">
+        
+        <!--icon-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+        <!--Custom CSS-->
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="grid-container">
+            
+            <!--Header-->
+            <header class="header">
+                <div class="menu-icon" onclick="openSidebar()">
+                    <span class="material-icons-outlined">menu</span>
+                </div>
+                <div class="header-left">
+                    <span class="material-icons-outlined">search</span>
+                </div>
+                <div class="header-right">
+                    <span class="material-icons-outlined">notifications</span>
+                        <span class="material-icons-outlined">email</span>
+                            <span class="material-icons-outlined">account_circle</span>
+                </div>
+            </header>
+
+            <!--Sidebar-->
+            <aside id="sidebar">
+                <div class="Sidebar-title">
+                    <div class="Sidebar-brand">
+                        <span class="material-icons-outlined">inventory</span>TrackZen 
+                    </div>
+                    <span class="material-icons-outlined" onclick="closesidebar()">close</span>
+                </div>
+
+                <ul class="Sidebar-list">
+                    <li class="Sidebar-list-item">
+                    <span class="material-icons-outlined">dashboard</span>Dashbord
+                </li>
+                <li class="Sidebar-list-item">
+                    <span class="material-icons-outlined">memory</span>Productivity
+                </li>
+                <li class="Sidebar-list-item">
+                    <span class="material-icons-outlined">download</span>Download
+                </li>
+                
+                
+                <li class="Sidebar-list-item">
+                    <span class="material-icons-outlined">poll</span>Reports
+                </li>
+                <li class="Sidebar-list-item">
+                    <span class="material-icons-outlined">settings</span>settings
+                </li>
+                </ul>
+            </aside>
+            
+            <!--Main-->
+            <main class="main-container"></main>
+        </div>
+
+        <!--Custon js-->
+        <script src="js/script.js"></script>
+        <h1>h1</h1>
+    </body>
+</html>
