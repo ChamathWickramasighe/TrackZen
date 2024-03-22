@@ -1,0 +1,299 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/styles.css">
+
+
+      <title>TrackZen</title>
+      <style>
+          body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+         .navbar {
+    background-color: black;
+    overflow: hidden;
+  }
+  .navbar-logo {
+    float: left;
+    padding: 10px 15px;
+  }
+  .navbar-logo img {
+    height: 40px; /* Adjust the height as needed */
+  }
+  .navbar-nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  .navbar-nav li {
+    display: inline-block;
+  }
+  .navbar-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  /* Dropdown styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+  }
+
+.blue-button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.blue-button:hover {
+  background-color: #2980b9;
+}
+
+/* Styles for the popup */
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border: 1px solid #000000;
+  z-index: 9999;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  text-align: left; /* Align text to the left */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup button {
+  display: block;
+  margin: 0 auto 10px; /* Center the close button horizontally and add margin bottom */
+}
+      </style>
+   </head>
+   <body>
+
+
+    <!-- nav bar start -->
+
+
+      <div class="navbar">
+         <div class="navbar-logo">
+           <img src="images/trackzen1.jpg" alt="Your Logo">
+         </div>
+         <ul class="navbar-nav">
+           <li><a href="C:\Users\Hp\Downloads\Kokila\Index.html">Home</a></li>
+           <li class="dropdown">
+         <a href="#" class="dropbtn" onclick="toggleDropdown()">Dashboard &#9662;</a>
+             <div class="dropdown-content" id="analyticsDropdown">
+               <a href="C:\Users\Hp\Downloads\Kokila\Dashboard.html#screenshots">Screenshots</a>
+		<a href="C:\Users\Hp\Downloads\Kokila\Dashboard.html#network">Network</a>
+		<a href="C:\Users\Hp\Downloads\Kokila\Dashboard.html#device">Device Info</a>
+		<a href="C:\Users\Hp\Downloads\Kokila\Dashboard.html#report">Report</a>
+       
+               
+             </div>
+           </li>
+		<li><a href="C:\Users\Hp\Downloads\Amandi\signin.html">SignIn</li>
+           <li><a href="C:\Users\Hp\Downloads\Kokila\Help.html">Help</a></li>
+         </ul>
+       </div>
+       
+       <script>
+         function toggleDropdown() {
+           var dropdownContent = document.getElementById("analyticsDropdown");
+           if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+             dropdownContent.style.display = "block";
+             // Add event listener to close dropdown when clicking outside of it
+             document.addEventListener('click', closeDropdownOnClickOutside);
+           } else {
+             dropdownContent.style.display = "none";
+             // Remove event listener when dropdown is closed
+             document.removeEventListener('click', closeDropdownOnClickOutside);
+           }
+         }
+       
+         function closeDropdownOnClickOutside(event) {
+           var dropdownContent = document.getElementById("analyticsDropdown");
+           var dropdownToggle = document.querySelector('.dropbtn');
+       
+           if (!dropdownContent.contains(event.target) && !dropdownToggle.contains(event.target)) {
+             dropdownContent.style.display = "none";
+             document.removeEventListener('click', closeDropdownOnClickOutside);
+           }
+         }
+       </script>
+
+
+       <!-- nav bar end -->
+
+   <!-- img -->
+  <div class="image-container">
+   <img src="images/Screenshot 2024-02-24 143855.png" alt="Image">
+   <div class="image-text">
+     <h1>Understand The Imapct Of Your Product Features</h1>
+     <p>Collects product feature usage from your user and build custom reports to uncover insights and opportunities</p>
+	
+<!-- The blue button -->
+<button class="blue-button" onclick="openPopup()">Get Started</button>
+
+<!-- The popup box -->
+<div id="myPopup" class="popup">
+  <h2>This is a Popup</h2>
+  <p>Popup content goes here.</p>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+// Function to open the popup
+function openPopup() {
+  document.getElementById("myPopup").style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+  document.getElementById("myPopup").style.display = "none";
+}
+</script>
+   </div>
+ </div>
+ <!-- img end -->
+
+ <!-- why section -->
+ <div class="why">
+   <p style="font-weight: bold; font-size: 32px;margin-bottom: 8px;">Why TrackZen?</p>
+ </div>
+
+      
+<!-- card content -->
+
+
+      <div class="card-container">
+         <div class="card">
+           <img src="images/proces optimize.png" alt="Image 1">
+           <div class="card-content">
+	<p>
+             <h4> Process Optimization </h4>
+             <p>By utilizing our application, a business can enhance user productivity effectively while upholding user privacy. TrackZen will capture screenshots at 30-minute intervals and utilize an AI algorithm to analyze them, gathering data on user digital activity. This enables concerned parties to gauge employee productivity and implement measures to enhance output, aligning with organizational objectives.              
+		</p>
+	</p>
+           </div>
+         </div>
+         <div class="card">
+           <img src="images/Screenshot 2024-02-27 034935.png" alt="Image 2">
+           <div class="card-content">
+	<p>
+             <h4>Employee Monitoring</h4>
+             <p>As a standard setting, TrackZen observes the typical office hours of a company, typically from 9 am to 5 pm (adjustable based on needs), and tracks employee screen time across various social media platforms and applications. It captures screenshots every 30 minutes, which are then processed by our AI to provide an approximate overview of user digital engagement.</p>
+	</p>
+           </div>
+         </div>
+         <div class="card">
+           <img src="images/monitoring.png" alt="Image 3">
+	<p>
+           <div class="card-content">
+             <h4>Report Analysing</h4>
+             <p>Based on insights gathered by our AI, TrackZen generates automated reports for individual employees, accessible to both employees and relevant management personnel. This allows management to implement necessary measures to enhance productivity. Moreover, TrackZen ensures the confidentiality of each employee's report, accessible solely to authorized parties.</p>
+	</p>
+           </div>
+         </div>
+       </div>
+     
+<!-- card content end -->
+
+
+<!-- reddy -->
+<div class="red">
+   <p style="font-weight:bold; font-size: 32px;margin-bottom: 8px;">Ready to try it out?</p>
+   <p>Learn more about this</p>
+   <button id="getStartedBtn" style="display: block; margin: 0 auto;border: none;border-radius: 15px;background-color: #1b1b1b;color: #ffffff;padding: 10px 25px;">Get Started</button>
+
+<div id="popup" class="popup">
+  <h2>Welcome to TrackZen!</h2>
+  <div class="popup-content">
+    <p>
+      <ul type="square">
+        <li>Focuses on enhancing the efficiency of employees during work hours.</li>
+        <li>Captures screenshots at 30-minute intervals and employs an AI algorithm for analysis.</li>
+        <li>Gathers data on user digital activity to offer an estimated summary of their digital involvement.</li>
+        <li>Ensures the confidentiality of each employee's report, accessible solely to authorized parties.</li>
+      </ul>
+    </p>
+  </div>
+  <button onclick="hidePopup()">Close</button>
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+<script>
+document.getElementById("getStartedBtn").addEventListener("click", function() {
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+});
+
+function hidePopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</script>
+ </div>
+
+<!-- redy -->
+<div class="footer">
+   <p>© Computing Group Project.   TrackZen All   rights reserved.</p>
+ </div>
+
+
+      <!--            js            --> 
+
+      <script src="js/main.js"></script>
+    
+      
+   </body>
+</html>

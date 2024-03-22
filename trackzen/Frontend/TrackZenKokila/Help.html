@@ -1,0 +1,197 @@
+ <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="css/styles.css">
+
+
+      <title>TrackZen help</title>
+      <style>
+          body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+         .navbar {
+    background-color: black;
+    overflow: hidden;
+  }
+  .navbar-logo {
+    float: left;
+    padding: 10px 15px;
+  }
+  .navbar-logo img {
+    height: 40px; /* Adjust the height as needed */
+  }
+  .navbar-nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  .navbar-nav li {
+    display: inline-block;
+  }
+  .navbar-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  /* Dropdown styles */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+  }
+/* Popup box styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+    .popup-content {
+      text-align: center;
+    }
+      </style>
+   </head>
+   <body>
+
+
+    <!-- nav bar start -->
+
+
+      <div class="navbar">
+         <div class="navbar-logo">
+           <img src="images/trackzen1.jpg" alt="Your Logo">
+         </div>
+         <ul class="navbar-nav">
+           <li><a href="C:\Users\Hp\Downloads\Kokila\Index.html">Home</a></li>
+           <li class="dropdown">
+         <a href="#" class="dropbtn" onclick="toggleDropdown()">Dashboard &#9662;</a>
+             <div class="dropdown-content" id="analyticsDropdown">
+               <a href="#C:\Users\Hp\Downloads\Kokila\Analytics.html">Screenshots</a>
+               <a href="#">Network</a>
+               <a href="#">Device Info</a>
+             <a href="#">Report</a>
+       
+               
+             </div>
+           </li>
+		<li><a href="C:\Users\Hp\Downloads\Amandi\signin.html">SignIn</li>
+           <li><a href="C:\Users\Hp\Downloads\Kokila\Help.html">Help</a></li>
+         </ul>
+       </div>
+       
+       <script>
+         function toggleDropdown() {
+           var dropdownContent = document.getElementById("analyticsDropdown");
+           if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+             dropdownContent.style.display = "block";
+             // Add event listener to close dropdown when clicking outside of it
+             document.addEventListener('click', closeDropdownOnClickOutside);
+           } else {
+             dropdownContent.style.display = "none";
+             // Remove event listener when dropdown is closed
+             document.removeEventListener('click', closeDropdownOnClickOutside);
+           }
+         }
+       
+         function closeDropdownOnClickOutside(event) {
+           var dropdownContent = document.getElementById("analyticsDropdown");
+           var dropdownToggle = document.querySelector('.dropbtn');
+       
+           if (!dropdownContent.contains(event.target) && !dropdownToggle.contains(event.target)) {
+             dropdownContent.style.display = "none";
+             document.removeEventListener('click', closeDropdownOnClickOutside);
+           }
+         }
+       </script>
+
+
+       <!-- nav bar end -->
+
+       <!-- how can we help -->
+
+       <div class="help">
+        <h1>How can we help?</h1>
+        <h4>Get in touch with our support team</h4> 
+      </div>
+    
+  
+<div class="button-container">
+    <div class="button-item">
+      <button onclick="showPopup('Let us know your problems and assist them the best we can!')"><i class="material-icons" style="font-size:36px">chat_bubble_outline</i></button>
+      <span class="button-text">Support</span>
+    </div>
+    <div class="button-item">
+      <button onclick="showPopup('Phone: +94 776093277<br><br>Email: <a href=\'mailto:someone@microsoft.com?subject=Hello%20again\'>Send mail</a>')"><i class="material-icons" style="font-size:36px">call</i></button>
+
+      <span class="button-text">Phone</span>
+    </div>
+    <div class="button-item">
+      <button onclick="showPopup('Reach out to our community and connect with us!')"><i class="material-icons" style="font-size:36px">supervisor_account</i></button>
+      <span class="button-text">Community</span>
+    </div>
+    <div class="button-item">
+      <button onclick="showPopup('Stay tuned for announcements about new features and updates, as well as instructions on how to use them!')"><i class="material-icons" style="font-size:36px">touch_app</i></button>
+      <span class="button-text">What's new</span>
+    </div>
+  </div>
+
+  <!-- Popup box -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span id="popupText"></span>
+      <div>
+        <br><button onclick="hidePopup()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showPopup(text) {
+      document.getElementById('popupText').innerHTML = text;
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+       <!-- how can we help end -->
+   
+
+<!-- redy -->
+<div class="footer">
+   <p>© Computing Group Project.   TrackZen All   rights reserved.</p>
+ </div>
+
+
+      <!--            js            --> 
+
+      <script src="js/main.js"></script>
+    
+      
+   </body>
+</html>
