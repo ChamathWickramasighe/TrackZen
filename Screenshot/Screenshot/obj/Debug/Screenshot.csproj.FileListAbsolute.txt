@@ -1,0 +1,10 @@
+D:\Uni\Group Project\Screenshot\Screenshot\bin\Debug\Screenshot.exe.config
+D:\Uni\Group Project\Screenshot\Screenshot\bin\Debug\Screenshot.exe
+D:\Uni\Group Project\Screenshot\Screenshot\bin\Debug\Screenshot.pdb
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.csproj.AssemblyReference.cache
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.Form1.resources
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.Properties.Resources.resources
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.csproj.GenerateResource.cache
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.csproj.CoreCompileInputs.cache
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.exe
+D:\Uni\Group Project\Screenshot\Screenshot\obj\Debug\Screenshot.pdb
